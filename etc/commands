@@ -1,0 +1,14 @@
+ docker run --name mysql  -e MYSQL_ROOT_PASSWORD=12345 -d -p 127.0.0.1:3306:3306  -e MYSQL_USER=akalend -e MYSQL_PASSWORD=12345   mysql
+ docker run --name mysql2 -e MYSQL_ROOT_PASSWORD=12345 -d -p 127.0.0.1:3307:3306  -e MYSQL_USER=akalend -e MYSQL_PASSWORD=12345   mysql
+
+
+mysql -u akalend -P 3306 -p -h 127.0.0.1 < configs/create_1.sql
+mysql -u akalend -P 3306 -p -h 127.0.0.1
+
+mysql -u akalend -P 3307 -p -h 127.0.0.1 < configs/create_2.sql
+
+
+mysql:
+GRANT ALL PRIVILEGES ON *.* TO 'akalend'@'%' ;
+FLUSH PRIVILEGES;
+

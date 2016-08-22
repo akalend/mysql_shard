@@ -1,0 +1,32 @@
+{
+   "name": "akalend/mysql_shard",
+    "description": "A Mysql wrapper client for scaling database",
+    "keywords": ["mysql", "sharding", "scale", "distribution"],
+    "type": "library",
+    "license": "PHP",
+    "authors": [
+        {
+            "name": "Alexandre Kalendarev",
+            "email": "akalend@mail.ru"
+        }
+    ],
+
+    "require": {
+        "php": "^5.4|^7.0"
+    },
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/akalend/mysql_shard"
+        }
+	],
+
+    "autoload": {
+        "psr-4": {
+        	"mysql_shard\\": "src/",
+            "vendor\\MysqlShard\\":""
+        }
+    }
+    
+}

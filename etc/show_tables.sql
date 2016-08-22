@@ -1,0 +1,1 @@
+SELECT TABLE_SCHEMA as db, TABLE_NAME as tables FROM information_schema.TABLES  WHERE TABLE_NAME like 'line%';
