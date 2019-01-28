@@ -111,11 +111,10 @@ class Config
     {
 
         static::$_conf = $conf;
-        static::_parse_conf   = null;
-        static::_pool         = null;
-        static::_shard_count  = null;
-        static::_shard2cnn    = null;
-
+        static::$_parse_conf   = null;
+        static::$_pool         = null;
+        static::$_shard_count  = null;
+        static::$_shard2cnn    = null;
 
         $redis = Service::redis();
         return $redis->set(static::KEY_PREFIX . $name,  serialize($conf) );
